@@ -1,0 +1,32 @@
+nosql
+
+/y/showing databases
+show dbs
+
+//current database
+db 
+
+//showing collections
+show collections
+
+//delete collections
+db.collectionname.drop()
+
+//delete database
+db.dropDatabases()
+
+//inset data in collection
+db.collectionname.insert(key:"value",key:"value")
+
+//for using database
+use databasename
+
+
+
+//pusing website on github by CLI
+git init
+git add . 
+git commit -m “first commit”
+git push — set-upstream origin master
+git remote add origin https://github.com/pallavisharma26/DemoApp
+git push — set-upstream origin master

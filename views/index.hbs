@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap&nodejs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    {{>navbar data=details}}
+
+    {{>slider slides=slider}}
+
+    {{!-- banner 1  --}}
+    <section class="bannner1 bg-black py-2 darkmod">
+      <div class="container text-center ">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Start learning new technology here !!</h1>
+          <p>Bootstrap’s color palette has continued to expand and become m
+            ore nuanced in v5.3.0. We’ve added new variables for secondary and t
+            ertiary text and background colors, plus {color}-bg-subtle, {color}-
+            border-subtle, and {color}-text-emphasis for our theme colors. These 
+            new colors are available through Sass and CSS variables (but not our c
+            olor maps or utility classes) with the express goal of making</p> 
+          <button type="button" class="btn btn-outline-success">start learning</button>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    {{!-- services section --}}
+    <section id="services_section" class=" py-3">
+
+      <div class="container">
+        <h1 class="text-center ">We Provide services</h1>
+
+    <div class="row mt-4">
+
+      {{!-- first service col --}}
+      {{#each service}}
+      <div class="col-md-4 mt-2">
+        <div class="card">
+          <div class="card-body">
+            <div class="container text-center py-3">
+              <i class="fa-brands {{this.icon}} iconsize"></i>
+            </div>
+            <h3 class="card-title">{{this.title}}</h3>
+            <p>{{this.description}}</p>
+            <a href="#">{{this.link1}}</a>
+            <a href="#">{{this.link2}}</a>
+          </div>
+        </div>
+      </div>
+     {{/each}}
+    
+      </div>
+    </div>
+    </section>
+
+    {{!-- contactus --}}
+    <section id="contact_us_section py-4" class="bg-black darkmod">
+      <div class="container">
+        <h3 class="text-center text-secondary">Contact Us</h3>
+        <div class="row">
+          <div class="col-md-12">
+
+    <form action="/processContactUs" method="post" >
+
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Contact no</label>
+    <input name="contactno" type="number" class="form-control" id="exampleInputPassword1">
+    </div>
+
+    <div class="form-floating mb-4">
+    <textarea style="height: 150px;" name="query" class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+    <label for="floatingTextarea">Query</label>
+    </div>
+
+   <div class="container text-center">
+     <button type="submit" class="btn btn-primary">Submit</button>
+   </div>
+    </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{!-- banner2 --}}
+     <section class="bannner2  py-4">
+      <div class="container text-center ">
+      <div class="row">
+        <div class="col-md-6 py-2" >
+          {{!-- left side --}}
+          <h3>Start learning new technology here !!</h3>
+          <p>Bootstrap’s color palette has continued to expand and become m
+            ore nuanced in v5.3.0. We’ve added new variables for secondary and t
+            ertiary text and background colors, plus {color}-bg-subtle, {color}-
+            border-subtle, and {color}-text-emphasis for our theme colors. These 
+            new colors are available through Sass and CSS variables (but not our c
+            olor maps or utility classes) with the express goal of making</p> 
+          <button type="button" class="btn btn-primary">click here</button>
+        </div>
+        <div class="col-md-6">
+          {{!-- right side --}}
+          <img src="/static/images/brand.png" style="height: 300px;" class="img-fluid" alt="">
+        </div>
+      </div>
+      </div>
+    </section>
+    
+     {{!-- banner3 --}}
+     <section class="bannner2  py-4">
+      <div class="container text-center ">
+      <div class="row">
+        <div class="col-md-6">
+          {{!-- right side --}}
+          <img src="/static/images/brand1.png" style="height: 300px;" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-6 py-2" >
+          {{!-- left side --}}
+          <h3>Start learning new technology here !!</h3>
+          <p>Bootstrap’s color palette has continued to expand and become m
+            ore nuanced in v5.3.0. We’ve added new variables for secondary and t
+            ertiary text and background colors, plus {color}-bg-subtle, {color}-
+            border-subtle, and {color}-text-emphasis for our theme colors. These 
+            new colors are available through Sass and CSS variables (but not our c
+            olor maps or utility classes) with the express goal of making</p> 
+          <button type="button" class="btn btn-primary">click here</button>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    {{!-- about section --}}
+     <section class="about">
+      <div class="container text-center py-4">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>About section</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+              Optio, blanditiis eos? A, minus est ad soluta illum consectetur 
+              suscipit debitis, tenetur repellendus impedit possimus nobis, labore
+               perspiciatis architecto error ipsam.
+            </p>
+            <button class="btn btn-success">contact us</button>
+          </div>
+        </div>
+      </div>
+     </section>
+
+     {{!-- footer --}}
+     <footer class="footer bg-black py-2 ">
+      <div class="container text-center darkmod">
+        <div class="row">
+          <div class="col-md-12">
+            <h4>&copy2023 Copyrights Belongs Alone.Pvt.Limited.com</h4>
+          </div>
+        </div>
+      </div>
+     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+.slider-image{
+    height: 500px!important;
+    object-fit: cover;
+}
+
+.iconsize{
+    font-size: 5rem;
+}
+
+.darkmod{
+    color: white;
+}
