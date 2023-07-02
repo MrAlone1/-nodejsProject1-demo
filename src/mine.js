@@ -134,5 +134,5 @@ mongoose.connect("mongodb://127.0.0.1/nodejsProject").then(()=>{
 //  const user = mongoose.model("user",userSchema)
 
 //port created
-app.listen(process.env.PORT | 3001,()=>{console.log("server started")});
+app.listen(process.env.PORT || 3001,()=>{console.log("server started")});
 
